@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+body{
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-direction: column;
+}
+.container > article {
+    height: 400px;
+    width: 400px;
+    background-color: rgb(173, 107, 235);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 0px #ccc;
+}
+.display_weather {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+}
+.display_weather > aside {
+    height: 25%;
+}
+.first{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+} 
+
+.first > input {
+    padding: 10px 20px;
+    width: 225px;
+ border: none;
+ background: #111;
+ color: #fff;
+ border-radius: 59px;
+ cursor: pointer;
+
+
+}
+.display_weather > second {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+
+}
+.second  > img{
+    width: 100px;
+    height: 100px;
+}
+.third > .display_temp {
+    font-size: 20px;
+    color: #fff;
+
+
+}
+.fourth{
+    display: flex;
+    flex-direction: row  !important;
+    align-items: center;
+    justify-content: center;
+
+}
+.hd{
+    font-size: 17px;
+    color: #fff;
+
+}
+.display_wind,
+.display_humidity{
+font-size:20px;
+color: #fff;
+}
+.br{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+</style>
+
+
+<body>
+    <section class="container">
+        <div class="br">
+            <h1>Weather Report</h1>
+            <h2 class="display_description">Mist</h2>
+           
+        </div>
+        <article>
+<div class="display_weather">
+    <aside class="first aside">
+<input 
+   type="text"
+   name="city"
+   id="city"
+   placeholder="Enter Your Location"
+   />
+   <button type="button" id="btn" > search</button>
+   </aside>
+   <aside class="second aside ">
+    <img
+    src="	https://png.pngtree.com/element_our/20190528/ourmid/pngtree-weather-icon-image_1175001.jpg"
+    alt="img1"
+    id="disply_image"
+    >
+</aside>
+
+    <aside class="third aside">
+        <h1 class="display_temp">24°</h1>
+        <h2 class="Display_location">London</h2>
+
+    </aside>
+    <aside class="fourth aside">
+    <section class="first_humidity">
+        <h1 class="hd">Humidity:</h1>
+        <h2 class="disply_humdity">17%</h2>
+    </section>
+    <section class="first_wind">
+        <h1 class="hd">Wind Speed</h1>
+        <h2 class="disply_wind">2.75km/hr</h2>
+    </section>
+
+    </aside>
+
+
+</div>
+
+
+        </article>
+    </section>
+<script src="./weather.js"></script>
+
+</body>
+</html>
